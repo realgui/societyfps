@@ -670,8 +670,8 @@ for i, v in pairs(Descendants) do
     end
 end
 StarterGui:SetCore("SendNotification", {
-    Title = "discord.gg/rips",
-    Text = "FPS Booster Loaded!",
+    Title = "discord.gg/Tnuckzx4ax",
+    Text = "Join on community!",
     Duration = math.huge,
     Button1 = "Okay"
 })
