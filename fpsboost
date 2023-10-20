@@ -734,4 +734,31 @@ if _G.SendNotifications then
     StarterGui:SetCore("SendNotification", {
         Title = "discord.gg/rips",
         Text = "Checking " .. #Descendants .. " Instances...",
-        Duration = 15
+        Duration = 15,
+        Button1 = "Okay"
+})
+end
+if _G.ConsoleLogs then
+    warn("Checking " .. #Descendants .. " Instances...")
+end
+for i, v in pairs(Descendants) do
+    CheckIfBad(v)
+    if i == WaitNumber then
+        task.wait()
+        if _G.ConsoleLogs then
+            print("Loaded " .. i .. "/" .. #Descendants)
+        end
+        WaitNumber = WaitNumber + StartNumber
+    end
+end
+StarterGui:SetCore("SendNotification", {
+    Title = "discord.gg/rips",
+    Text = "FPS Booster Loaded!",
+    Duration = math.huge,
+    Button1 = "Okay"
+})
+warn("FPS Booster Loaded!")
+--game.DescendantAdded:Connect(CheckIfBad)
+--[[game.DescendantAdded:Connect(function(value)
+    CheckIfBad(value)
+end)]]
