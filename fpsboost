@@ -682,7 +682,8 @@ warn("FPS Booster Loaded!")
 --game.DescendantAdded:Connect(CheckIfBad)
 --[[game.DescendantAdded:Connect(function(value)
     CheckIfBad(value)
-end)]]￼Enter    if _G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"]) then
+end)]]    
+if _G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"]) then
         if setfpscap then
             if type(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])) == "string" or type(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])) == "number" then
                 setfpscap(tonumber(_G.Settings["FPS Cap"] or (_G.Settings.Other and _G.Settings.Other["FPS Cap"])))
@@ -733,4 +734,4 @@ if _G.SendNotifications then
     StarterGui:SetCore("SendNotification", {
         Title = "discord.gg/rips",
         Text = "Checking " .. #Descendants .. " Instances...",
-        Duration = 15,
+        Duration = 15
